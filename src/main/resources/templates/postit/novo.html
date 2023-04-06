@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="UTF-8" />
+
+    <title>Inicio</title>
+
+    <link href="/css/postit.css" rel="stylesheet">
+
+</head>
+<body>
+  <form method="post" action="/criarpostit">
+    <ul>
+        <li>
+          <a>
+            <h2><input id="titulo" name="titulo" required class="titulo" placeholder="Titulo" style="font-size: 2rem;"></h1>
+            <hr>
+            <textarea id="conteudo" name="conteudo" required placeholder="Conteudo" ></textarea>
+            <hr>
+            <label>Data prevista : 
+              <input id="dataPrevista" name="dataPrevista" required type="date" class="date" >
+            </label>
+            <hr>
+            <button type="submit" class="button">Criar</button>
+          </a>
+        </li>
+    </ul>
+  </form>
+</body>
+</html>

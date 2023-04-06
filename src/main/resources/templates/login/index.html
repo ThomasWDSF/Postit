@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+
+    <link href="/css/entrada.css" rel="stylesheet">
+
+</head>
+<body>
+    <form method="post" action="/logar" >
+        <div class="container">
+          <h1>Login</h1>
+          <hr>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Digite seu email" name="email" id="email">
+      
+          <p></p>
+
+          <label for="senha"><b>Senha</b></label>
+          <input type="password" placeholder="Digite sua senha" name="senha" id="senha">
+      
+          <p></p>
+
+          <button type="submit">Logar</button>
+
+          <p></p>
+
+          <a href="/register">Ainda não tem uma conta?</a>
+
+          <p></p>
+
+          <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert"></div>
+
+        </div>
+      </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+
+    <link href="/css/entrada.css" rel="stylesheet">
+
+</head>
+<body>
+    <form method="post" action="/criar" >
+        <div class="container">
+          <h1>Cadastrar</h1>
+          <hr>
+      
+          <label for="nome"><b>Nome</b></label>
+          <input type="text" placeholder="Digite seu nome" name="nome" id="nome">
+      
+          <hr>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Digite seu email" name="email" id="email">
+          
+          <div th:if="${existe != null}" th:text="${existe}" class="alert alert-danger" role="alert"></div>
+          <hr>
+
+          <p></p>
+
+          <label for="senha"><b>Senha</b></label>
+          <input type="password" placeholder="Digite sua senha" name="senha" id="senha">
+      
+          <hr>
+
+          <p></p>
+
+          <button type="submit">Cadastrar</button>
+
+          <p></p>
+
+          <a href="/login">Já tem uma conta?</a>
+
+
+        </div>
+      </form>
+</body>
+</html>
