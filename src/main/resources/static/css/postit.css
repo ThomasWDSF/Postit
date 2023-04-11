@@ -31,6 +31,10 @@ body {
     padding:1em;
   }
 
+  li{
+    font-size: larger
+  }
+
   .titulo {
     
     background-color: #ffc;
@@ -83,4 +87,16 @@ body {
   .button:hover {
     background-color: rgb(68, 68, 54);; 
     color: white;
+  }
+  
+  .center {
+    
+    inline-size: -webkit-fill-available;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
   }
