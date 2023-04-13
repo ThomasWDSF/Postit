@@ -11,7 +11,7 @@
 <style>.w3-sidebar a {font-family: "Roboto", sans-serif} body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 </style>
 </head>
-<body class="w3-content" style="max-width:1200px">
+<body class="w3-content" style="max-width:1180px">
 
     <link href="/css/postit.css" rel="stylesheet">
 
@@ -33,11 +33,10 @@
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
 </header>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- Overlay effect when opening sidebar on small screens --><div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:250px">
+<div class="w3-main" style="margin-left:270px">
 
   <!-- Push down content on small screens -->
   <div class="w3-hide-large" style="margin-top:83px"></div>
@@ -48,16 +47,51 @@
     </p>
   </header>
 
-    <ul >
-        <li >
-          <a href="postit/novo">
-            <p class="center">
-              +
-            </p>
-          </a >
-        </li>
-    </ul>
+  <ul>
+    <li>
+      <div class="criar">
+        <h2><input id="titulo" name="titulo" required class="titulo" placeholder="Titulo" style="font-size: 2rem;"></h1>
+        <hr>
+        <textarea id="conteudo" name="conteudo" required placeholder="Conteudo" ></textarea>
+        <hr>
+        <label>Data prevista : 
+          <input id="dataPrevista" name="dataPrevista" required type="date" class="date" >
+        </label>
+        <hr>
+      </div>
+    </li>
+</ul>
 
+<ul>
+  <li>
+    <div class="criar">
+      <h2><input id="titulo" name="titulo" required class="titulo" placeholder="Titulo" style="font-size: 2rem;"></h1>
+      <hr>
+      <textarea id="conteudo" name="conteudo" required placeholder="Conteudo" ></textarea>
+      <hr>
+      <label>Data prevista : 
+        <input id="dataPrevista" name="dataPrevista" required type="date" class="date" >
+      </label>
+      <hr>
+    </div>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    <div class="criar">
+      <h2><input id="titulo" name="titulo" required class="titulo" placeholder="Titulo" style="font-size: 2rem;"></h1>
+      <hr>
+      <textarea id="conteudo" name="conteudo" required placeholder="Conteudo" ></textarea>
+      <hr>
+      <label>Data prevista : 
+        <input id="dataPrevista" name="dataPrevista" required type="date" class="date" >
+      </label>
+      <hr>
+    </div>
+  </li>
+</ul>
+   
   <!-- End page content -->
 </div>
 
