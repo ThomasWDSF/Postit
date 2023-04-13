@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "Postit")
+@Table(name = "Postits")
 public class Postit {
     
     @Id
@@ -31,7 +31,7 @@ public class Postit {
     private String titulo;
 
     @Column(name = "Conteudo")
-    @Size(min=0,max=50)
+    @Size(min=0,max=255)
     private String conteudo;
 
     @DateTimeFormat

@@ -3,6 +3,7 @@ body {
     background:#14120f;
     color:#fff;
     max-width: 1190px;
+    display: -webkit-box;
   }
   
   h2 {
@@ -40,14 +41,16 @@ body {
     font-size: larger
   }
 
-  .novo{
+  .postit{
     text-decoration:none;
     color:#000;
     background:#ffc;
     display:block;
-    height:20em;
     width:15em;
     padding:1em;
+    display: inline-block;
+    margin-right: 30px;
+    margin-bottom: 20px;
   }
 
   .criar{
@@ -55,7 +58,6 @@ body {
     color:#000;
     background:#ffc;
     display:block;
-    height:20em;
     width:15em;
     padding:1em;
   }
@@ -78,7 +80,7 @@ body {
     text-align: center;
   }
 
-  textarea {
+  .textarea {
     width: 50%;
     height: 100px;
     padding: 6px 10px;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
-<title>Criar novo</title>
+<title>Meus postits</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -19,7 +19,7 @@
 <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
   <div class="w3-container w3-display-container w3-padding-16">
     <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-    <h3 class="w3-wide"><b><a href="/postit">POSTIT'S</a></b></h3>
+    <h3 class="w3-wide"><a href="/postit">POSTIT'S</a></h3>
   </div>
   <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
     <a href="/postit/postites" class="w3-bar-item w3-button">Meus postit's</a>
@@ -50,23 +50,22 @@
   <!-- End page content -->
 </div>
 
-<form method="post" action="/criarpostit">
-  <ul>
-      <li>
-        <div class="criar">
-          <h2><input id="titulo" name="titulo" required class="titulo" placeholder="Titulo" style="font-size: 2rem;"></h1>
-          <hr>
-          <textarea class="textarea" id="conteudo" name="conteudo" required placeholder="Conteudo" ></textarea>
-          <hr>
-          <label>Data prevista : 
-            <input id="dataPrevista" name="dataPrevista" required type="date" class="date" >
-          </label>
-          <hr>
-          <button type="submit" class="button">Criar</button>
+<ul >
+  <li>
+    <tr th:each="postit : ${postits}">
+      <div class="postit">
+        <h1 class="titulo" th:text="${postit.titulo}" id="titulo" name="titulo" sstyle="font-size: 2rem;"></h1>
+        <hr>
+        <h2 class="textarea" th:text="${postit.conteudo}" id="conteudo" name="conteudo" ></h2>
+        <hr>
+        <label>Data prevista : 
+          <h3 th:text="${postit.dataPrevista}" name="dataPrevista"></h3>
+        </label>
+        <hr>
         </div>
-      </li>
-  </ul>
-</form>
+  </tr>
+  </li>
+</ul>
 
 </body>
 </html>
