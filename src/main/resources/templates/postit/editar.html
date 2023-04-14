@@ -1,0 +1,22 @@
+<div th:replace="shared/header"></div>
+
+<form method="post" th:action="@{'/postit/' + ${postit.id} + '/atualizar'}">
+  <ul>
+      <li>
+        <div class="criar">
+          <h2><input id="titulo" th:value="${postit?.titulo}" name="titulo" required class="titulo" placeholder="Titulo" style="font-size: 2rem;"></h1>
+          <hr>
+          <textarea class="textarea" id="conteudo" name="conteudo" required placeholder="Conteudo" th:inline="text">[[${postit?.conteudo}]]</textarea>
+          <hr>
+          <label>Data prevista : 
+            <input id="dataPrevista" th:value="${postit?.dataPrevista}" name="dataPrevista" required type="date" class="date" >
+          </label>
+          <hr>
+          <button type="submit" class="button">Editar</button>
+        </div>
+      </li>
+  </ul>
+</form>
+
+</body>
+</html>

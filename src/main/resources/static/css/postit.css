@@ -33,8 +33,6 @@ body {
   ul a{
     text-decoration:none;
     color:#000;
-    font-size: 150px;
-    padding:25%;
   }
 
   li{
@@ -126,4 +124,21 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 120px;
+  }
+
+  .alter{
+    text-decoration:none;
+    color:#000;
+    margin-right: 30px;
+    padding: 2px;
+    background-color:rgb(212, 183, 110);
+  }
+
+  .delet {
+    
+    text-decoration:none;
+    color:#000;
+    margin-left: 30px;
+    padding: 2px;
+    background-color: rgb(221, 104, 104);
   }

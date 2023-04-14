@@ -1,10 +1,13 @@
 package com.postit.postit.controllers;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.postit.postit.models.Postit;
@@ -44,4 +47,27 @@ public class PostitController {
         return"redirect:/postit/postites";
     }
 
-}
+    @GetMapping("postit/{id}")
+        public String busca(@PathVariable int id, Model model){
+            Optional<Postit> postits = prepo.findById(id);
+            try{ model.addAttribute("postit", postits.get());}
+                catch(Exception erro) {return "redirect:/postit";}
+                return "postit/editar";
+        }
+
+    @PostMapping("postit/{id}/atualizar")
+        public String atualizar(@PathVariable int id, Postit postit){
+            if(!prepo.existsById(id)){
+                return "redirect:/postit";
+            }
+            prepo.save(postit);
+            return "redirect:/postit/postites";
+        }
+
+    @GetMapping("postit/{id}/excluir")
+    public String excluir(@PathVariable int id){
+        prepo.deleteById(id);
+        return "redirect:/postit/postites";
+    }
+
+    }
